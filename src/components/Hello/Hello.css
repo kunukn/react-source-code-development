@@ -1,0 +1,9 @@
+.hello {
+  margin: 0;
+  font-size: 10rem;
+  font-weight: bold;
+}
+
+.hello--awesome {
+  color: rebeccapurple;
+}
