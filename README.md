@@ -87,7 +87,7 @@ The steps are long due to simply using `yarn link` in packages will yield runtim
 
 We want to ensure we use the `umd` builds.
 
-Else you might experience error like these:
+Else you might experience errors like these:
 
 ```
 Failed to compile
