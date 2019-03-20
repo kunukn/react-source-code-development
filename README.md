@@ -45,16 +45,16 @@ Do your changes and invoke a build to update the change, e.g. a change for react
 
 * Go to react folder
 * Find this file `/react/scripts/rollup/build.js` and comment out this line `await asyncRimRaf('build');` This ensures that we don't delete everything before we build again.
-* In the file `react/packages/react-dom/src/client/ReactDOM.js` add this consoleLog code snippet inside the `ReactDOM` object. 
+* In the file `react/packages/react-dom/src/client/ReactDOM.js` add this consoleLog code snippet inside the `ReactDOM` object.
 
 e.g.
 ```
 const ReactDOM: Object = { // existing code
   consoleLog: function log(){console.log(...arguments)}, // new code
-``` 
+```
 
 * Invoke from React project: `yarn build react-dom/index --type=UMD_DEV` and wait until it finishes.
-* The browser detect the change and refresh automatically.
+* The browser detect the change and refreshes automatically.
 * In the browser console you should see a custom message invoked by the new ReactDOM method.
 
 ### Known hiccups
