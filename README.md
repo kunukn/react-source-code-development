@@ -142,7 +142,7 @@ alternatively you could replace all `/cjs/` with `/umd/`
 20. From the react folder, invoke `yarn build react-dom/index --type=UMD_DEV` and wait until it finishes
 21. Re-edit the `react/build/node_modules/react/index.js` and `react/build/node_modules/react-dom/index.js` from step `5` and `6`
 22. From create-react-app project, stop the app and start it again with `yarn start`
-23. The React source code should be picked up by create-react-app
+23. The React source code changes should be picked up by create-react-app
 
 To reduce the steps above, you could fiddle with the React build definition.
 
