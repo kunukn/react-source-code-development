@@ -1,4 +1,6 @@
 # React source code development
+
+## About
 Custom webpack project for React source code development.
 
 If you want to use create-react-app instead, then there is a howto description at the bottom.
@@ -53,7 +55,7 @@ const ReactDOM: Object = { // existing code
 
 * Invoke from React project: `yarn build react-dom/index --type=UMD_DEV` and wait until it finishes.
 * The browser detect the change and refresh automatically.
-* In the browser console you should see a message.
+* In the browser console you should see a custom message invoked by the new ReactDOM method.
 
 ### Known hiccups
 
