@@ -3,7 +3,11 @@
 ## About
 Custom webpack project for React source code development.
 
-If you want to use create-react-app instead, then there is a howto description at the bottom.
+In the React source code there are already custom ways of testing the code using the fixtures folders. They are not always up to date.
+
+The aim of this project is to have the latest Webpack, Babel + plugins and better developer experience (DX). This web project should hot reload when the React source code has been updated.
+
+If you want to use create-react-app instead, then there is a howto description at the bottom. Although that is a complicated affair and not good DX. You could fiddle with the build setup for the React source code to make it simpler.
 
 *Last tested with React version: 16.8.4*
 
