@@ -133,6 +133,14 @@ replace all `/cjs/` with `/umd/`
 *alternatively adjust `package.json` main attribute to `"main": "umd/react-dom.development.js",`*
 
 7. Go to react/build/node_modules/react and invoke `yarn link`
+
+*alternatively to yarn link, you can adjust in the package.json to point relatively to the location. e.g.*
+
+```
+"react": "link:../react/build/node_modules/react",
+"react-dom": "link:../react/build/node_modules/react-dom",
+```
+
 8. Go to react/build/node_modules/react-dom and invoke `yarn link`
 9. go to your favorite project folder
 11. Invoke `npx create-react-app my-react-app`
