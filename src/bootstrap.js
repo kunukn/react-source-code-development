@@ -9,7 +9,7 @@ const Hello = lazy(() => import('./components/Hello/Hello.jsx')
   const obj = {
     foo: {
       bar: {
-        baz: 42,
+        baz: 42
       },
     },
   };
@@ -19,7 +19,9 @@ const Hello = lazy(() => import('./components/Hello/Hello.jsx')
 ReactDOM.render(
   <StrictMode>
     <Fragment>
-    { do { if (true) <div><strong>do</strong> syntax was supported</div>; } }
+    { do { 
+      if (true) <div>I can use <strong>if</strong> syntax in React render method</div>; } 
+    }
     <Suspense fallback={<div style={{fontSize: '10rem'}}>loading...</div>}>
       <Hello>React source code development</Hello>
     </Suspense>

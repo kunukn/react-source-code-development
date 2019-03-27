@@ -5,7 +5,7 @@ import './Hello.css';
 const obj = {
   foo: {
     bar: {
-      baz: !,
+      baz: 1,
     },
   },
 };
