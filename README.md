@@ -113,23 +113,24 @@ SyntaxError: <project-path>\react\packages\scheduler\src\Scheduler.js: Unexpecte
 2. If you don't have yarn, then invoke from a command line `npm i -g yarn`
 3. Invoke `yarn`
 4. Invoke `yarn build react/index,react-dom/index --type=UMD_DEV` and wait until it finishes
-5. Change file content in `react/build/node_modules/react/index.js` to
 
-```
-console.warn('custom react');
-module.exports = require('./umd/react.development.js');
-```
+*(to build both dev and prod use: `yarn build react/index,react-dom/index --type=UMD`)*
 
-alternatively you could replace all `/cjs/` with `/umd/`
+5. Change file content in `react/build/node_modules/react/index.js` 
 
-6. Change file content in `react/build/node_modules/react-dom/index.js` to
+replace all `/cjs/` with `/umd/`
 
-```
-console.warn('custom react-dom');
-module.exports = require('./umd/react-dom.development.js');
-```
+*alternatively replace it with `module.exports = require('./umd/react.development.js');`*
 
-alternatively you could replace all `/cjs/` with `/umd/`
+*alternatively adjust `package.json` main attribute to `"main": "umd/react.development.js",`*
+
+6. Change file content in `react/build/node_modules/react-dom/index.js`
+
+replace all `/cjs/` with `/umd/`
+
+*alternatively replace it with `module.exports = require('./umd/react-dom.development.js');`*
+
+*alternatively adjust `package.json` main attribute to `"main": "umd/react-dom.development.js",`*
 
 7. Go to react/build/node_modules/react and invoke `yarn link`
 8. Go to react/build/node_modules/react-dom and invoke `yarn link`
@@ -140,7 +141,7 @@ alternatively you could replace all `/cjs/` with `/umd/`
 14. Invoke `yarn`
 15. Invoke `yarn link react react-dom`
 16. Invoke `yarn start`
-17. In the browser, inspect the browser console, you should see the custom react and react-dom warning messages.
+17. The React source code build should be picked up by create-react-app
 18. Make a change in e.g. the react-dom project
 19. Find the file `/react/scripts/rollup/build.js` and comment out this line `await asyncRimRaf('build');` This ensures that we don't have to delete everything before we build again.
 20. From the react folder, invoke `yarn build react-dom/index --type=UMD_DEV` and wait until it finishes
