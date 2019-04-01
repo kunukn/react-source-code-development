@@ -38,6 +38,7 @@ If you don't have yarn installed already then from a command line
 Invoke from react folder
 
 * `yarn`
+* Find this file `/react/scripts/rollup/build.js` and comment out this line `await asyncRimRaf('build');` This ensures that we don't delete everything before we build again.
 * `yarn build react/index,react-dom/index --type=UMD_DEV`
 
 Go to this project's folder and invoke
@@ -48,7 +49,6 @@ Go to this project's folder and invoke
 Do your changes and invoke a build to update the change, e.g. a change for react-dom
 
 * Go to react folder
-* Find this file `/react/scripts/rollup/build.js` and comment out this line `await asyncRimRaf('build');` This ensures that we don't delete everything before we build again.
 * In the file `react/packages/react-dom/src/client/ReactDOM.js` add this consoleLog code snippet inside the `ReactDOM` object.
 
 e.g.
