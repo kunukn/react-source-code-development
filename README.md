@@ -1,7 +1,7 @@
 # React source code development
 
 ## About
-Custom webpack project for React source code development.
+Custom webpack-dev-server project for React source code development.
 
 In the React source code there are already custom ways of testing the code using the fixtures folders. They are not always up to date.
 
