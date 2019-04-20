@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'; // uses Webpack alias
 import 'components/Base/base.css';
 
 const simulateLatencyMSec = 800;
-const Hello = lazy(() => import('./components/Hello/Hello.jsx')
+const Hello = lazy(() => import('./components/Hello')
   .then(x => new Promise(resolve => setTimeout(() => resolve(x), simulateLatencyMSec))));
 
   const obj = {
