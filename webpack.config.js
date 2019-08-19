@@ -1,12 +1,15 @@
-/*
- * webpack 4+
- * */
-
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 
 const webpack = require('webpack');
+
+const devReactFile = 'react.development.js';
+const devReactDOMFile = 'react-dom.development.js';
+const prodReactFile = 'react.production.min.js';
+const prodReactDOMFile = 'react-dom.production.min.js';
+const pathToReact = `../react/build/node_modules/react/umd/${devReactFile}`;
+const pathToReactDOM = `../react/build/node_modules/react-dom/umd/${devReactDOMFile}`;
 
 // const IsWebpackDevServer = /webpack-dev-server/.test(process.env.npm_lifecycle_script);
 
@@ -106,7 +109,7 @@ module.exports = (env = {}, argv = {}) => {
               options: {}
             }
           ]
-        },
+        }
       ].filter(Boolean)
     },
     plugins: [
@@ -127,8 +130,8 @@ module.exports = (env = {}, argv = {}) => {
         root: __dirname,
         src: path.resolve(__dirname, 'src'),
         components: path.resolve(__dirname, 'src/components'),
-        react: path.resolve(__dirname, '../react/build/node_modules/react/umd/react.development.js'), // PATH TO REACT PROJECT
-        'react-dom': path.resolve(__dirname, '../react/build/node_modules/react-dom/umd/react-dom.development.js') // PATH TO REACT PROJECT
+        react: path.resolve(__dirname, pathToReact),
+        'react-dom': path.resolve(__dirname, pathToReactDOM)
       }
     },
     externals: {}
