@@ -8,8 +8,10 @@ const devReactFile = 'react.development.js';
 const devReactDOMFile = 'react-dom.development.js';
 const prodReactFile = 'react.production.min.js';
 const prodReactDOMFile = 'react-dom.production.min.js';
-const pathToReact = `../react/build/node_modules/react/umd/${devReactFile}`;
-const pathToReactDOM = `../react/build/node_modules/react-dom/umd/${devReactDOMFile}`;
+
+const useDev = true;
+const pathToReact = `../react/build/node_modules/react/umd/${useDev ? devReactFile : prodReactFile}`;
+const pathToReactDOM = `../react/build/node_modules/react-dom/umd/${useDev ? devReactDOMFile : prodReactDOMFile}`;
 
 // const IsWebpackDevServer = /webpack-dev-server/.test(process.env.npm_lifecycle_script);
 
