@@ -8,7 +8,7 @@ The aim of this project is to have the latest Webpack, Babel + <a href="https://
 
 If you want to use create-react-app instead, then there is a howto description at the bottom. Although that is a complicated affair and not good DX. You could fiddle with the build setup for the React source code to make it simpler.
 
-_Last tested with React version: 16.12.0_
+_Last tested with React version: 16.13.0_
 
 ## Benefits of using this web project.
 
